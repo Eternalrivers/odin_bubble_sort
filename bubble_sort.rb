@@ -6,15 +6,17 @@ def bubble_sorter(arr)
       p num
       p arr
       p index
-
-      if arr[index] > arr[index + 1]
-        a = arr[index]
-        b = arr[index +1]
-        arr[index] = b
-        arr[index + 1] = a
-        p arr[index]
-        p arr[index + 1]
-        p "this is #{num}"
+      if arr[index + 1 ] == nil
+        next
+        if arr[index] > arr[index + 1]
+          a = arr[index]
+          b = arr[index +1]
+          arr[index] = b
+          arr[index + 1] = a
+          p arr[index]
+          p arr[index + 1]
+          p "this is #{num}"
+        end
       end
     end
 end
