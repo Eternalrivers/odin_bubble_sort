@@ -7,14 +7,14 @@ def bubble_sorter(arr)
     pass_count = 0
 
     arr.each_with_index do |num, index|
-      if arr[index + 1 ] == nil
-        next
-      elsif arr[index] > arr[index + 1]
-        a = arr[index]
-        b = arr[index +1]
+      current_value = arr[index]
+      next_value = arr[index + 1]
 
-        arr[index] = b
-        arr[index + 1] = a
+      if next_value == nil
+        next
+      elsif current_value > next_value
+        arr[index] = next_value
+        arr[index + 1] = current_value
       else
         pass_count += 1
         next
